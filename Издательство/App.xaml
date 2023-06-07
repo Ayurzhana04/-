@@ -4,6 +4,33 @@
              xmlns:local="clr-namespace:Издательство"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="21"/>
+            <Setter Property="FontFamily" Value="Times New Roman"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        
+        
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="Times New Roman"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        
+        
+        <Style TargetType="PasswordBox">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="Times New Roman"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontFamily" Value="Times New Roman"/>
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="Background" Value="#fefe00 "/>
+        </Style>
+        
+        
     </Application.Resources>
 </Application>

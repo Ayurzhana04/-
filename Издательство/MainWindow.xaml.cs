@@ -20,9 +20,12 @@ namespace Издательство
     /// </summary>
     public partial class MainWindow : Window
     {
+        ИздательствоEntities context; 
         public MainWindow()
         {
             InitializeComponent();
+            context = new ИздательствоEntities();
+            myFrame.Navigate(new Страницы.Авторизация(context));
         }
     }
 }

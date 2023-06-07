@@ -1,0 +1,39 @@
+﻿<Page x:Class="Издательство.Страницы.Авторизация"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Издательство.Страницы"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Авторизация"
+      Background="#228b22">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Column="0" Grid.Row="1" Margin="10" Source="/Картинки/logo.png" />
+        <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" FontSize="35" VerticalAlignment="Center" Foreground="#fefe00">Авторизация</TextBlock>
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <TextBlock>Введите логин</TextBlock>
+            <TextBox Name="loginBox"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <TextBlock>Введите пароль</TextBlock>
+            <PasswordBox Name="passwordBox"/>
+        </StackPanel>
+        <Button Grid.Column="1" Grid.Row="4" Margin="130,15,130,13" Click="EnterClick" Name="buttonEnter">Вход</Button>
+        
+    </Grid>
+</Page>
