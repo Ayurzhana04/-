@@ -25,21 +25,21 @@ namespace Издательство
         public MainWindow()
         {
             InitializeComponent();
-            DownloadPictures();
+            //DownloadPictures();
             context = new ИздательствоEntities1();
             myFrame.Navigate(new Страницы.Авторизация(context));
         }
 
-        public void DownloadPictures()
-        {
-            using (ИздательствоEntities1 context = new ИздательствоEntities1())
-            {
-                foreach (var item in context.TypeProduction.ToList())
-                {
-                    item.Photo = File.ReadAllBytes($"C:/Users/aurza/Documents/практика 2023/image/{item.IdType}.jpg");
-                }
-                context.SaveChanges();
-            }
-        }
+        //public void DownloadPictures()
+        //{
+        //    using (ИздательствоEntities1 context = new ИздательствоEntities1())
+        //    {
+        //        foreach (var item in context.TypeProduction.ToList())
+        //        {
+        //            item.Photo = File.ReadAllBytes($"C:/Users/aurza/Documents/практика 2023/image/{item.IdType}.jpg");
+        //        }
+        //        context.SaveChanges();
+        //    }
+        //}
     }
 }

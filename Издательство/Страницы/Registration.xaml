@@ -33,7 +33,7 @@
         <TextBox Grid.Row="4" Grid.Column="1" x:Name="postBox" FontSize="25" Margin="5,5,5,5"/>
         <TextBlock Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Height="28" Width="162">Введите логин:</TextBlock>
         <TextBox Grid.Row="5" Grid.Column="1" x:Name="loginBox" FontSize="25" Margin="5,5,5,5"/>
-        <Button Grid.Row="6" HorizontalAlignment="Left" Click="AddClick" Grid.Column="1" Margin="14,20,0,20" Width="98">Добавить</Button>
+        <Button Grid.Row="6" HorizontalAlignment="Left" Click="AddClick" Grid.Column="1" Margin="20,20,20,20" Width="167">Добавить</Button>
 
     </Grid>
 </Window>

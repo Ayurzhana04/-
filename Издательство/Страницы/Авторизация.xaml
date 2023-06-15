@@ -35,7 +35,7 @@
         </StackPanel>
         <Button Grid.Column="1" Grid.Row="4" Margin="130,15,130,13" Click="EnterClick" Name="buttonEnter">Вход</Button>
         <Button Grid.Column="2" Grid.Row="5" Margin="40,10,40,20" Click="RegistrationClick" >Регистрация</Button>
-        <Button Grid.Column="0" Grid.Row="5" Margin="40,10,40,20" FontSize="14" Visibility="Collapsed" Click="RememberPassClick" Name="remindBtn">Напомнить пароль</Button>
+        <Button Grid.Column="0" Grid.Row="5" Margin="20,10,10,20" FontSize="14" Visibility="Collapsed" Click="RememberPassClick" Name="remindBtn">Напомнить пароль</Button>
         
     </Grid>
 </Page>
