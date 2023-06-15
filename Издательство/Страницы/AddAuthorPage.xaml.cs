@@ -16,27 +16,31 @@ using System.Windows.Shapes;
 namespace Издательство.Страницы
 {
     /// <summary>
-    /// Логика взаимодействия для MainPage.xaml
+    /// Логика взаимодействия для AddAuthorPage.xaml
     /// </summary>
-    public partial class MainPage : Page
+    public partial class AddAuthorPage : Page
     {
-        Window Window;
-        ИздательствоEntities1 _context;
-        public MainPage(ИздательствоEntities1 context, Window window)
+        ИздательствоEntities1 context;
+        public AddAuthorPage(ИздательствоEntities1 c)
         {
             InitializeComponent();
-            Window = window;
-            _context = context;
+            context = c;
         }
 
-        private void EscapeClick(object sender, RoutedEventArgs e)
+        private void CancelClick(object sender, RoutedEventArgs e)
         {
-            Window.Close();
+            NavigationService.GoBack();
         }
 
-        private void AuthorClick(object sender, RoutedEventArgs e)
+        private void AddAuthor(object sender, RoutedEventArgs e)
         {
-            frameToBasePages.Navigate(new AuthorPage(_context));
+            Author aut = new Author()
+            {
+
+            };
+            context.Author.Add(aut);
+            context.SaveChanges();
         }
+        
     }
 }

@@ -27,7 +27,7 @@ namespace Издательство
             InitializeComponent();
             //DownloadPictures();
             context = new ИздательствоEntities1();
-            myFrame.Navigate(new Страницы.Авторизация(context));
+            myFrame.Navigate(new Страницы.Авторизация(context, this));
         }
 
         //public void DownloadPictures()

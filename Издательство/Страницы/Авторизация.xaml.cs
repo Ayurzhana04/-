@@ -23,14 +23,16 @@ namespace Издательство.Страницы
     {
         ИздательствоEntities1 context;
         DispatcherTimer timer;
-        public Авторизация(ИздательствоEntities1 cont)
+        Window window;
+        public Авторизация(ИздательствоEntities1 cont, Window w)
         {
             InitializeComponent();
             context= cont;
+            window= w;
             timer= new DispatcherTimer();
             timer.Interval = new TimeSpan(0,0,30);
             timer.Tick += Timer_Tick;
-        }
+        } 
 
         private void Timer_Tick(object sender, EventArgs e)
         {
@@ -52,6 +54,7 @@ namespace Издательство.Страницы
                 {
                     MessageBox.Show("Вы успешно авторизованы!");
                     countClick = 0;
+                    NavigationService.Navigate(new MainPage(context, window));
                 }
                 else 
                 {

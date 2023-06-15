@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Издательство.Страницы"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="900"
       Title="MainPage">
 
     <Grid>
@@ -15,22 +15,24 @@
         </Grid.ColumnDefinitions>
        
         <Frame Name="frameToBasePages" Grid.Column="1"/>
-        <StackPanel Orientation="Vertical" Background="#228b22">
-            <Image Source="/Картинки/logo.png" Height="120"/>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-            </Grid>
-            <Button Grid.Row="0">Авторы</Button>
-            <Button Grid.Row="1">Клиенты</Button>
-            <Button Grid.Row="2">Публикации</Button>
+        <Grid Background="#228b22">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="77"/>
+                <RowDefinition Height="77"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="75"/>
+            </Grid.RowDefinitions>
+       
+            <Image Source="/Картинки/logo.png" Height="100" Grid.RowSpan="2"/>
 
-        </StackPanel>
+            <Button Grid.Row="2" Click="AuthorClick">Авторы</Button>
+            <Button Grid.Row="3">Публикации</Button>
+            <Button Grid.Row="8">Выход</Button>
+        </Grid>
     </Grid>
 </Page>
