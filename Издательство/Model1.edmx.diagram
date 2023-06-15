@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fd0b24346d424da986b0756fcf17ad0c" Name="Diagram1">
+      <Diagram DiagramId="2bca60c45dbd47319e66c38713bb3b9b" Name="Diagram1">
         <EntityTypeShape EntityType="ИздательствоModel.Author" Width="1.5" PointX="7.5" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ИздательствоModel.AuthorsPublications" Width="1.5" PointX="9.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ИздательствоModel.Client" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
@@ -12,8 +12,8 @@
         <EntityTypeShape EntityType="ИздательствоModel.Publication" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ИздательствоModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ИздательствоModel.TypeClient" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ИздательствоModel.TypeProduction" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ИздательствоModel.Typography" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ИздательствоModel.TypeProduction" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ИздательствоModel.Typography" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ИздательствоModel.User" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
         <AssociationConnector Association="ИздательствоModel.FK_AuthorsPublications_Author" ManuallyRouted="false" />
         <AssociationConnector Association="ИздательствоModel.FK_AuthorsPublications_Publication" ManuallyRouted="false" />

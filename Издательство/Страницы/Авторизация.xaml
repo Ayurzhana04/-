@@ -26,14 +26,16 @@
         <Image Grid.Column="0" Grid.Row="1" Margin="10" Source="/Картинки/logo.png" />
         <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" FontSize="35" VerticalAlignment="Center" Foreground="#fefe00">Авторизация</TextBlock>
         <StackPanel Grid.Row="2" Grid.Column="1">
-            <TextBlock>Введите логин</TextBlock>
-            <TextBox Name="loginBox"/>
+            <TextBlock>Введите имя</TextBlock>
+            <TextBox Name="NameBox"/>
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="1">
             <TextBlock>Введите пароль</TextBlock>
             <PasswordBox Name="passwordBox"/>
         </StackPanel>
         <Button Grid.Column="1" Grid.Row="4" Margin="130,15,130,13" Click="EnterClick" Name="buttonEnter">Вход</Button>
+        <Button Grid.Column="2" Grid.Row="5" Margin="40,10,40,20" Click="RegistrationClick" >Регистрация</Button>
+        <Button Grid.Column="0" Grid.Row="5" Margin="40,10,40,20" FontSize="14" Visibility="Collapsed" Click="RememberPassClick" Name="remindBtn">Напомнить пароль</Button>
         
     </Grid>
 </Page>

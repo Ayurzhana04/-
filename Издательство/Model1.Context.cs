@@ -13,10 +13,10 @@ namespace Издательство
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ИздательствоEntities : DbContext
+    public partial class ИздательствоEntities1 : DbContext
     {
-        public ИздательствоEntities()
-            : base("name=ИздательствоEntities")
+        public ИздательствоEntities1()
+            : base("name=ИздательствоEntities1")
         {
         }
     

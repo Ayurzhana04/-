@@ -78,6 +78,7 @@
           </Key>
           <Property Name="IdType" Type="int" Nullable="false" />
           <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Photo" Type="image" />
         </EntityType>
         <EntityType Name="Typography">
           <Key>
@@ -312,6 +313,7 @@
           </Key>
           <Property Name="IdType" Type="Int32" Nullable="false" />
           <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="Order" Relationship="Self.FK_Order_TypeProduction" FromRole="TypeProduction" ToRole="Order" />
         </EntityType>
         <EntityType Name="Typography">
@@ -418,7 +420,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ИздательствоEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ИздательствоEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Author" EntityType="Self.Author" />
           <EntitySet Name="AuthorsPublications" EntityType="Self.AuthorsPublications" />
           <EntitySet Name="Client" EntityType="Self.Client" />
@@ -463,7 +465,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище ИздательствоModelContainer" CdmEntityContainer="ИздательствоEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ИздательствоModelContainer" CdmEntityContainer="ИздательствоEntities1">
           <EntitySetMapping Name="Author">
             <EntityTypeMapping TypeName="ИздательствоModel.Author">
               <MappingFragment StoreEntitySet="Author">
@@ -543,6 +545,7 @@
               <MappingFragment StoreEntitySet="TypeProduction">
                 <ScalarProperty Name="IdType" ColumnName="IdType" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

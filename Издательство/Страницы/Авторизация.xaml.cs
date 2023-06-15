@@ -21,9 +21,9 @@ namespace Издательство.Страницы
     /// </summary>
     public partial class Авторизация : Page
     {
-        ИздательствоEntities context;
+        ИздательствоEntities1 context;
         DispatcherTimer timer;
-        public Авторизация(ИздательствоEntities cont)
+        public Авторизация(ИздательствоEntities1 cont)
         {
             InitializeComponent();
             context= cont;
@@ -43,9 +43,9 @@ namespace Издательство.Страницы
         private void EnterClick(object sender, RoutedEventArgs e)
         {
             countClick++;
-            string log = loginBox.Text;
+            string name = NameBox.Text;
             string pass = passwordBox.Password;
-            User user = context.User.Find(log);
+            User user = context.User.Find(name);
             if (user!=null) 
             {
                 if (user.Password.Equals(pass)) 
@@ -58,8 +58,7 @@ namespace Издательство.Страницы
                     MessageBox.Show("Некорректный ввод пароля!!!");
                     if (countClick >= 3) 
                     {
-                        buttonEnter.IsEnabled = false;
-                        timer.Start();
+                        remindBtn.Visibility= Visibility.Visible;
                     }
                 }
             }
@@ -68,10 +67,24 @@ namespace Издательство.Страницы
                 MessageBox.Show("Такого пользователя не существует.");
                 if (countClick >= 3)
                 {
-                    buttonEnter.IsEnabled = false;
-                    timer.Start();
+                    remindBtn.Visibility = Visibility.Visible;
                 }
             }
+        }
+
+        private void RegistrationClick(object sender, RoutedEventArgs e)
+        {
+            Registration registration = new Registration(context);
+            registration.Show();
+            //NavigationService.Navigate(new ());
+        }
+
+        private void RememberPassClick(object sender, RoutedEventArgs e)
+        {
+            User us = context.User.Find(NameBox.Text);
+            NavigationService.Navigate(new RememberPassPage(us));
+
+
         }
     }
 }
