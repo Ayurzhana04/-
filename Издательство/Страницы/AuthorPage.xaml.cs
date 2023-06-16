@@ -33,7 +33,32 @@ namespace Издательство.Страницы
 
         private void AddAuthorClick(object sender, RoutedEventArgs e)
         {
+            NavigationService.Navigate(new AddAuthorPage(context));
+        }
 
+        private void RemoveClick(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Вы точно хотите удалить автора???", "Удаление", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    Author aut = (sender as Hyperlink).DataContext as Author;
+                    context.Author.Remove(aut);
+                    context.SaveChanges();
+                    AuthorData.ItemsSource = context.Author.ToList();
+                }
+                catch 
+                {
+                    MessageBox.Show("Ошибка!");
+                }
+            }
+        }
+
+        private void UpdateClick(object sender, RoutedEventArgs e)
+        {
+            Author aut = (sender as Hyperlink).DataContext as Author;
+            NavigationService.Navigate(new AddAuthorPage(context, aut));
         }
     }
 }

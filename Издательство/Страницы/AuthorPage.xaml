@@ -37,8 +37,8 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <TextBlock FontSize="14"><Hyperlink>Редактировать</Hyperlink></TextBlock>
-                                <TextBlock FontSize="14"><Hyperlink>Удалить</Hyperlink></TextBlock>
+                                <TextBlock FontSize="14"><Hyperlink Click="UpdateClick">Редактировать</Hyperlink></TextBlock>
+                                <TextBlock FontSize="14" Foreground="Red"><Hyperlink Click="RemoveClick">Удалить</Hyperlink></TextBlock>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

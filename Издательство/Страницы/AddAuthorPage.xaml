@@ -27,15 +27,15 @@
         </Grid.RowDefinitions>
         <TextBlock Grid.ColumnSpan="2" FontSize="30">Добавить автора</TextBlock>
         <Rectangle Grid.Row="1" Grid.ColumnSpan="2" Fill="#fefe00" Height="15" VerticalAlignment="Top" Margin="5"/>
-        <TextBlock Grid.Row="3" HorizontalAlignment="Right">ФИО</TextBlock>
+        <TextBlock Grid.Row="3" HorizontalAlignment="Center">ФИО</TextBlock>
         <TextBox Grid.Row="3" Grid.Column="2" x:Name="NameBox" HorizontalAlignment="Left" Width="250"/>
-        <TextBlock Grid.Row="4" HorizontalAlignment="Right">Телефон</TextBlock>
+        <TextBlock Grid.Row="4" HorizontalAlignment="Center">Телефон</TextBlock>
         <TextBox Grid.Row="4" Grid.Column="2" x:Name="PhoneBox" HorizontalAlignment="Left" Width="250"/>
-        <TextBlock Grid.Row="5" HorizontalAlignment="Right">Звание</TextBlock>
+        <TextBlock Grid.Row="5" HorizontalAlignment="Center">Звание</TextBlock>
         <TextBox Grid.Row="5" Grid.Column="2" x:Name="CommentBox" HorizontalAlignment="Left" Width="250"/>
-        <TextBlock Grid.Row="6" HorizontalAlignment="Right">Адрес</TextBlock>
+        <TextBlock Grid.Row="6" HorizontalAlignment="Center">Адрес</TextBlock>
         <TextBox Grid.Row="6" Grid.Column="2" x:Name="adresBox" HorizontalAlignment="Left" Width="250"/>
-        <Button Grid.Row="8" HorizontalAlignment="Right" FontSize="15" Click="CancelClick" Margin="30,5,30,5" Width="120">Отмена</Button>
-        <Button Grid.Row="8" Grid.Column="1" HorizontalAlignment="Left" FontSize="15" Click="AddAuthor" Margin="30,5,30,5" Width="120">Добавить</Button>
+            <Button Grid.Row="8" HorizontalAlignment="Right" FontSize="15" Click="CancelClick" Margin="30,5,30,5" Width="120">Отмена</Button>
+            <Button Name="buttonAU" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Left" FontSize="15" Click="AddAuthor" Margin="30,5,30,5" Width="120">Добавить</Button>
     </Grid>
 </Page>
