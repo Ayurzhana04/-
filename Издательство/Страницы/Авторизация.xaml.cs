@@ -52,12 +52,14 @@ namespace Издательство.Страницы
             {
                 if (user.Password.Equals(pass)) 
                 {
+                    passwordBox.Background = Brushes.Green;
                     MessageBox.Show("Вы успешно авторизованы!");
                     countClick = 0;
                     NavigationService.Navigate(new MainPage(context, window));
                 }
                 else 
                 {
+                    passwordBox.Background = Brushes.Red;
                     MessageBox.Show("Некорректный ввод пароля!!!");
                     if (countClick >= 3) 
                     {
