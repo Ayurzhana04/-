@@ -60,5 +60,10 @@ namespace Издательство.Страницы
             Author aut = (sender as Hyperlink).DataContext as Author;
             NavigationService.Navigate(new AddAuthorPage(context, aut));
         }
+
+        private void EditClick(object sender, RoutedEventArgs e)
+        {
+            Author aut = AuthorData.SelectedItem as Author;
+        }
     }
 }

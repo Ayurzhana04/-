@@ -29,6 +29,12 @@
         <TextBlock x:Name="countAut" Grid.Row="2"/>
         <TextBlock x:Name="sumAut" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Right"/>
         <DataGrid Name="AuthorData" AutoGenerateColumns="False" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="5">
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Click="EditClick">Редактировать</MenuItem>
+                    <MenuItem>Удалить</MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ФИО" Width="*" Binding="{Binding Name}" FontSize="14"/>
                 <DataGridTextColumn Header="Телефон" Width="*" Binding="{Binding Phone}" FontSize="14"/>
