@@ -31,7 +31,7 @@
             <Image Source="/Картинки/logo.png" Height="100" Grid.RowSpan="2"/>
 
             <Button Grid.Row="2" Click="AuthorClick">Авторы</Button>
-            <Button Grid.Row="3">Публикации</Button>
+            <Button Grid.Row="3" Click="PublicClick">Публикации</Button>
             <Button Grid.Row="8">Выход</Button>
         </Grid>
     </Grid>
