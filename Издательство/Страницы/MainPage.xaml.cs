@@ -43,5 +43,10 @@ namespace Издательство.Страницы
         {
             frameToBasePages.Navigate(new PublicPage(_context));
         }
+
+        private void ClientClick(object sender, RoutedEventArgs e)
+        {
+            frameToBasePages.Navigate(new ZakazPage(_context));
+        }
     }
 }

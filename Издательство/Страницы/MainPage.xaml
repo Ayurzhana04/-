@@ -21,8 +21,7 @@
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="77"/>
                 <RowDefinition Height="77"/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="77"/>
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition Height="75"/>
@@ -32,6 +31,7 @@
 
             <Button Grid.Row="2" Click="AuthorClick">Авторы</Button>
             <Button Grid.Row="3" Click="PublicClick">Публикации</Button>
+            <!--<Button Grid.Row="4" Click="ClientClick">Заказы</Button>-->
             <Button Grid.Row="8">Выход</Button>
         </Grid>
     </Grid>
